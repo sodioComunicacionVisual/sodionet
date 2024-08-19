@@ -181,7 +181,7 @@
 
 
 		/* ==================================================
-            # Overveiw Carousel
+            # Services Carousel
          ===============================================*/
 		const overviewCarousel = new Swiper(".overview-carousel", {
 			// Optional parameters
@@ -189,7 +189,7 @@
 			slidesPerView: 1,
 			spaceBetween: 0,
 			autoplay: {
-				delay: 5000,
+				delay: 15000,
 				disableOnInteraction: false,
 			},
 
@@ -541,3 +541,159 @@
 		const video = container.querySelector('video');
 		video.pause(); // Pausar el video en el punto actual
 	}
+
+
+		/*------------------------------------------
+	= split text
+	-------------------------------------------*/
+	$(document).ready(function() {
+		splitText();
+	});
+	
+	function splitText() {
+		var st = $(".xb-split-text");
+        if(st.length == 0) return;
+        gsap.registerPlugin(SplitText);
+        st.each(function(index, el) {
+            el.split = new SplitText(el, { 
+                type: "lines,words,chars",
+                linesClass: "split-line"
+            });
+            gsap.set(el, { perspective: 100 });
+
+            if( $(el).hasClass('split-in-fade') ){
+                gsap.set(el.split.chars, {
+                    opacity: 0,
+                    ease: "Back.easeOut",
+                });
+            }
+            if( $(el).hasClass('split-in-right') ){
+                gsap.set(el.split.chars, {
+                    opacity: 0,
+                    x: "70",
+                    ease: "Back.easeOut",
+                });
+            }
+            if( $(el).hasClass('split-in-left') ){
+                gsap.set(el.split.chars, {
+                    opacity: 0,
+                    x: "-50",
+                    ease: "circ.out",
+                });
+            }
+            if( $(el).hasClass('split-in-up') ){
+                gsap.set(el.split.chars, {
+                    opacity: 0,
+                    y: "80",
+                    ease: "circ.out",
+                });
+            }
+            if( $(el).hasClass('split-in-down') ){
+                gsap.set(el.split.chars, {
+                    opacity: 0,
+                    y: "-80",
+                    ease: "circ.out",
+                });
+            }
+            if( $(el).hasClass('split-in-rotate') ){
+                gsap.set(el.split.chars, {
+                    opacity: 0,
+                    rotateX: "50deg",
+                    ease: "circ.out",
+                });
+            }
+            if( $(el).hasClass('split-in-scale') ){
+                gsap.set(el.split.chars, {
+                    opacity: 0,
+                    scale: "0.5",
+                    ease: "circ.out",
+                });
+            }
+            el.anim = gsap.to(el.split.chars, {
+                scrollTrigger: {
+                    trigger: el,
+                    // toggleActions: "restart pause resume reverse",
+                    start: "top 100%",
+                },
+                x: "0",
+                y: "0",
+                rotateX: "0",
+                scale: 1,
+                opacity: 1,
+                duration: 0.4, 
+                stagger: 0.06,
+            });
+        });
+	}
+
+	/*------------------------------------------
+	= trigger
+	-------------------------------------------*/
+	gsap.registerPlugin(ScrollTrigger);
+	$('.xb_trigger').each(function () {
+		gsap.to(this, {
+			scrollTrigger: {
+				trigger: this,
+			},
+			onComplete: function() {
+				this.targets().forEach(function(target) {
+					target.classList.add('triggered');
+				});
+			}
+		});
+	});
+
+	// GSAP AboutUs Gallery
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	document.addEventListener("DOMContentLoaded", function() {
+	  if (document.getElementById("portfolio")) {
+		const horizontalSections = gsap.utils.toArray('.horiz-gallery-wrapper');
+	
+		horizontalSections.forEach(function (sec) {
+	
+		  const pinWrap = sec.querySelector(".horiz-gallery-strip");
+	
+		  let pinWrapWidth;
+		  let horizontalScrollLength;
+	
+		  function refresh() {
+			pinWrapWidth = pinWrap.scrollWidth;
+			horizontalScrollLength = pinWrapWidth - window.innerWidth;
+		  }
+	
+		  refresh();
+		  
+		  gsap.to(pinWrap, {
+			scrollTrigger: {
+			  scrub: true,
+			  trigger: sec,
+			  pin: sec,
+			  start: "center center",
+			  end: () => `+=${pinWrapWidth}`,
+			  invalidateOnRefresh: true
+			},
+			x: () => -horizontalScrollLength,
+			ease: "none"
+		  });
+	
+		  ScrollTrigger.addEventListener("refreshInit", refresh);
+		});
+	  }
+	});
+	
+
+	document.querySelector('.portfolio-section').addEventListener('mousemove', function (e) {
+		const cursor = document.querySelector('.cursor_cursor');
+		cursor.style.left = e.clientX + 'px';
+		cursor.style.top = e.clientY + 'px';
+	  });
+	  
+	  document.querySelector('.portfolio-section').addEventListener('mouseleave', function () {
+		document.querySelector('.cursor_cursor').style.display = 'none';
+	  });
+	  
+	  document.querySelector('.portfolio-section').addEventListener('mouseenter', function () {
+		document.querySelector('.cursor_cursor').style.display = 'grid';
+	  });

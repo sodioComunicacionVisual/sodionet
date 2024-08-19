@@ -9,7 +9,7 @@
     <meta name="description" content="Metize - Startup & SaaS Template">
 
     <!-- ========== Page Title ========== -->
-    <title>SODIO | Visual Communication </title>
+    <title> SODIO | Visual Communication </title>
 
     <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="assets/img/favicon.webp" type="image/x-icon">
@@ -28,6 +28,8 @@
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/imageRevealHover.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preload" href="https://unpkg.com/@splinetool/viewer@1.9.15/build/spline-viewer.js" as="script">
+
 
 
     <!-- ========== End Stylesheet ========== -->
@@ -39,7 +41,8 @@
 </head>
 
 <body>
-
+    <div id="gooey"></div>
+    <div class="grain"></div>
     <!-- Start Preloader 
     ============================================= -->
     <div id="preloader">
@@ -97,50 +100,18 @@
                         <i class="fa fa-times"></i>
                     </button>
                     
-                    <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="dropdown">
+                    <ul style="gap: 20px;" class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li >
                             <a href="index.html" class="active">Home</a>
+                        </li>
 
+                        <li>
+                            <a href="about-us.html">About Us</a>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Pages</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="team.html">Team</a></li>
-                                <li><a href="team-details.html">Team Details</a></li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="faq.html">FAQ</a></li>
-                                <li><a href="contact-us.html">Contact Us</a></li>
-                                <li><a href="404.html">Error Page</a></li>
-                            </ul>
+                        <li>
+                            <a href="#caseStudiesSection">Projects</a>
                         </li>
-                        <li class="dropdown">
-                            <a href="project.html" class="dropdown-toggle" data-toggle="dropdown" >Projects</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="project.html">Project style one</a></li>
-                                <li><a href="project-details.html">Project Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Services</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="services.html">Services Version One</a></li>
-                                <li><a href="services-2.html">Services Version Two</a></li>
-                                <li><a href="services-details.html">Services Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Blog</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="blog-standard.html">Blog Standard</a></li>
-                                <li><a href="blog-with-sidebar.html">Blog With Sidebar</a></li>
-                                <li><a href="blog-2-colum.html">Blog Grid Two Colum</a></li>
-                                <li><a href="blog-3-colum.html">Blog Grid Three Colum</a></li>
-                                <li><a href="blog-single.html">Blog Single</a></li>
-                                <li><a href="blog-single-with-sidebar.html">Blog Single With Sidebar</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact-us.html">contact</a></li>
+
                     </ul>
                 </div><!-- /.navbar-collapse -->
 
@@ -149,7 +120,7 @@
                     <div class="attr-nav">
                         <ul>
                             <li class="button">
-                                <a href="contact-us.html">Contact</a>
+                                <a href="#contactSection ">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -168,9 +139,10 @@
     </header>
     <!-- End Header -->
 
+
     <!-- Start Banner Area 
     ============================================= -->
-    <section>
+    <section id="heroBannerAreaSection">
         <div class="banner-software text-center text-light" >
         <video class="ukiyo" autoplay muted loop id="bg-video" style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: -1; border-radius: 0 0 10px 10px;">
             <source src="assets/img/BannerOpt1.mp4" type="video/mp4">
@@ -179,19 +151,23 @@
                 <div class="content-box">
                     <div class="row align-center">
                         <div class="col-lg-8 offset-lg-2 info">
-                            <h2>We Are a <strong> Passionate </strong> Creative Design Agency</h2>
+                            <h2 class="xb-split-text split-in-right">We Are a Passionate Creative Design Agency</h2>
                             <p>
                                 Lasted hunted enough an up seeing in lively letter. Had judgment out opinions property the supplied.
                             </p>
+ 
+                        </div>
 
+                    </div>
+
+                    <div class="row align-center">
+                        <div class="col-lg-12 offset-lg-2 info">
+
+                            <a href="#capabilitiesSection" class="btn-shine">Read More</a>
+
+ 
                         </div>
-                        <div class="col-lg-10 offset-lg-1">
-                            <div class="thumb-inner">
-                                <img class="animate" data-animate="fadeInRight" src="assets/img/dashboard/1.jpg" alt="Thumb">
-                                <img class="animate" data-animate="fadeInLeft" data-delay="500ms" src="assets/img/dashboard/d1.jpg" alt="Thumb">
-                                <img class="animate" data-animate="fadeInLeft" data-delay="300ms" src="assets/img/dashboard/d2.jpg" alt="Thumb">
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -199,18 +175,16 @@
     </section>
     <!-- End Banner -->
 
-    <!-- Start Feature
+    <!-- Our Capabilities
     ============================================= -->
-    <section>
+    <section id="capabilitiesSection">
     <div class="feature-style-one-area default-padding">
-        <div class="shape">
-            <img src="assets/img/shape/1.png" alt="Image Not Found">
-        </div>
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <h4 class="sub-title">Our Strenghts</h4>
-                    <h2 class="title mb-30 mb-md-50">We Are a Big Team</h2>
+                    <h2 class="title mb-30 mb-md-50 xb-split-text split-in-right">We Are a Big Team</h2>
                     <div class="feature-alert">
                         <p>
                             We embarked on our journey in Cuernavaca, Mexico, in 1998. Working on diverse projects across multiple industries, we transitioned from traditional analog frameworks to immersive virtual environments.
@@ -229,10 +203,10 @@
                         <!-- Single item -->
                         <div class="col-md-6 mb-30">
                             <div class="feature-style-one-item animate" data-animate="fadeInUp">
-                                <i class="fas fa-thumbtack"></i>
-                                <h4>Manage tasks </h4>
+                                <i class="fas fa-clock"></i>
+                                <h4>TimeZone </h4>
                                 <p>
-                                    Continue indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius.
+                                    Based in Mexico and operating in the CST time zone, we have successfully undertaken projects worldwide, adeptly adapting to different time zones.
                                 </p>
                             </div>
                         </div>
@@ -241,10 +215,9 @@
                         <div class="col-md-6 mb-30">
                             <div class="feature-style-one-item animate" data-animate="fadeInUp">
                                 <i class="fas fa-cog"></i>
-                                <h4>Productivity </h4>
+                                <h4>Multidisciplinary Teams </h4>
                                 <p>
-                                    Continue indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius.
-                                </p>
+                                    While we share a solid foundation in design, each of us specializes in different areas. This diversity enables us to deliver versatile results and tackle a wide range of projects.                                </p>
                             </div>
                         </div>
                         <!-- End Single item -->
@@ -252,10 +225,9 @@
                         <div class="col-md-6 mb-30">
                             <div class="feature-style-one-item animate" data-animate="fadeInUp" data-delay="300ms">
                                 <i class="fas fa-lightbulb-on"></i>
-                                <h4>Knowledge </h4>
+                                <h4>Client Knowledge </h4>
                                 <p>
-                                    Continue indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius.
-                                </p>
+                                    With experience across diverse industries, we quickly gain in-depth insights into our clients, their businesses, and their respective fields.                                </p>
                             </div>
                         </div>
                         <!-- End Single item -->
@@ -263,30 +235,36 @@
                         <div class="col-md-6 mb-30">
                             <div class="feature-style-one-item animate" data-animate="fadeInUp" data-delay="300ms">
                                 <i class="fas fa-handshake-alt"></i>
-                                <h4>Collaboration</h4>
+                                <h4>Friendly Process</h4>
                                 <p>
-                                    Continue indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius.
-                                </p>
+                                    We cultivate a collaborative and creative working environment, prioritizing both enjoyment and efficiency for all participants, while remaining proactive throughout the process.                                </p>
                             </div>
                         </div>
                         <!-- End Single item -->
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <img style="border-radius: 30px;" class="ukiyo " data-animate="fadeInRight" src="assets/img/IMG_6364.jpg" alt="Thumb">
+                </div>
+            </div>
+            
         </div>
     </div>
-</section>
-    <!-- End Feature -->
+    </section>
+    <!-- Our Capabilities End -->
 
     <!-- Start Main Services
     ============================================= -->
-    <div data-aos="fade-up" class="overview-area">
+    <div data-aos="fade-up" class="overview-area" id="mainServicesSection">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 offset-lg-2">
+                <div class="col-lg-8 offset-lg-2 mt-50">
                     <div class="site-heading text-center">
                         <h4 class="sub-title">Our Main Services</h4>
-                        <h2 class="title">Get everything together</h2>
+                        <h2 class="title xb-split-text split-in-right">Get everything together</h2>
                         <div class="devider"></div>
                     </div>
                 </div>
@@ -305,14 +283,29 @@
                                 <!-- Single item -->
                                 <div class="swiper-slide">
                                     <div class="overview-item">
-                                        <div class="overview-thumb">
-                                            <div class="portfolio-item xb-img-reveal-item mt-60" data-cat="Press Here"
-                                            data-title="VIEW CASE STUDY" data-fx="1">
-                                                <img src="assets/img/dashboard/1.jpg" alt="Image Not Found">
-                                            </div>
-                                        </div>
+                                        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.15/build/spline-viewer.js"></script>
+                                        <spline-viewer url="https://prod.spline.design/7yjNXFZy4JKD8it6/scene.splinecode"></spline-viewer>
                                         <div class="overview-content">
-                                            <h2>App integration</h2>
+                                            <h2>UI/UX Design</h2>
+                                            <p>
+                                                Domestic position. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.
+                                            </p>
+                                            <ul>
+                                                <li>Presentation-level integration</li>
+                                                <li>Business process integration</li>
+                                                <li>Data integration</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single item -->
+                                <!-- Single item -->
+                                <div class="swiper-slide">
+                                    <div class="overview-item">
+                                        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.15/build/spline-viewer.js"></script>
+                                        <spline-viewer url="https://prod.spline.design/Dv074wOTdRrVs03m/scene.splinecode"></spline-viewer>
+                                        <div class="overview-content">
+                                            <h2>Digital Media</h2>
                                             <p>
                                                 Domestic position. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.
                                             </p>
@@ -329,30 +322,7 @@
                                 <div class="swiper-slide">
                                     <div class="overview-item">
                                         <div class="overview-thumb">
-                                            <div  class="portfolio-item xb-img-reveal-item mt-60" data-cat="Press Here"
-                                            data-title="VIEW CASE STUDY" data-fx="1">
-                                                <img src="assets/img/dashboard/3.jpg" alt="Image Not Found">
-                                            </div>
-                                            </div>
-                                        <div class="overview-content">
-                                            <h2>App Customization</h2>
-                                            <p>
-                                                Domestic position. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.
-                                            </p>
-                                            <ul>
-                                                <li>Presentation-level integration</li>
-                                                <li>Business process integration</li>
-                                                <li>Data integration</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single item -->
-                                <!-- Single item -->
-                                <div class="swiper-slide">
-                                    <div class="overview-item">
-                                        <div class="overview-thumb">
-                                            <div class="portfolio-item xb-img-reveal-item mt-60" data-cat="Press Here"
+                                            <div class="portfolio-item xb-img-reveal-item " data-cat="Press Here"
                                             data-title="VIEW CASE STUDY" data-fx="1">
                                                 <img src="assets/img/dashboard/2.jpg" alt="Image Not Found">
                                             </div>
@@ -384,10 +354,10 @@
             </div>
         </div>
     </div>
-    <!-- End Software Overview -->
+    <!-- End Main Services -->
 
-    <!-- brand area start  -->
-    <div class="brand-style-three about-brand ">
+    <!-- Brand area Start  -->
+    <div class="brand-style-three about-brand " id="enterpriseStripSection">
     <div class="container-fluid">
     <div class="brand-slider about-slider swiper-container">
         <div class="swiper-wrapper">
@@ -511,43 +481,42 @@
     </div>
     </div>
     </div>
-    <!-- brand area end  -->
+    <!-- brand area End  -->
 
 
 
-    <!-- Start Software Benifits
+    <!-- Start Red Mision Container
     ============================================= -->
-    <div data-aos="fade-up"  class="software-benifits-area overflow-hidden default-padding">
+    <div data-aos="fade-up" class="software-benifits-area overflow-hidden default-padding" id="missionSection">
     <div class="background-image-container">
     <img src="assets/img/redTexture.webp" alt="Background Image">
     </div>
     <div class="container">
     <div class="row">
     <div class="col-xl-6 col-lg-5">
-        <h4 class="sub-title">Software Benifits</h4>
-        <h2 class="title mb-30 animation-text">Work Smarter With <br> Powerful Features</h2>
-        <p>
-            Greatly explain attempt perhaps in feeling he. House men taste bed not drawn joy. Through enquire however do equally herself at. Greatly way old may you present improve. Wishing the feeling village him musical.
-        </p>
-        <ul class="list-double mt-40">
-            <li class="animate" data-animate="fadeInUp">
-                <h5>Powerful search</h5>
-                <p>
-                    Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit. Ex vidit fierent 
-                </p>
+        <h4 class="white-text" class="sub-title">Our Mission</h4>
+        <h2 class="title mb-30 animation-text white-text ">Work Smarter With <br> Powerful Features</h2>
+        <p class="white-text">
+            At our core is our team, which brings together the expertise of senior professionals with fresh perspectives from younger generations, offering a multidisciplinary and intergenerational approach to the creation of visual experiences.        <ul class="list-double mt-40">
+            <li class="animate" data-animate="fadeInUp" >
+                <h5 class="white-text">Learn & Share</h5>
+                <p class="white-text">
+                    We foster a culture of continuous learning, exploring new technologies and trends. We gain knowledge from clients, industries, and each other, and prioritize sharing insights to support collective growth.</p>
             </li>
             <li class="animate" data-animate="fadeInUp" data-delay="300ms">
-                <h5>Data insights</h5>
-                <p>
-                    Expert worker
-                </p>
+                <h5 class="white-text">Human Awareness</h5>
+                <p class="white-text">
+                    We understand that behind every project and goal are real people. We value the unique perspectives and contributions of our team, clients, and their markets, recognizing the importance of individuality.</p>
             </li>
             <li class="animate" data-animate="fadeInUp" data-delay="600ms">
-                <h5>Team management</h5>
-                <p>
-                    To reach your target
-                </p>
+                <h5 class="white-text">Sonar Focus</h5>
+                <p class="white-text">
+                    We focus intensely on each project, much like sonar honing in on a target, while staying mindful of the broader context.</p>
             </li>
+            <li class="animate" data-animate="fadeInUp" data-delay="600ms">
+                <h5 class="white-text">Mixed Powers</h5>
+                <p class="white-text">
+                    We celebrate our team's diverse talents, emphasizing collaboration over individualism. We value the unique skills and perspectives that everyone, including clients and colleagues, brings to the table, knowing that every contribution enhances our collective strength.</li>
         </ul>
     </div>
     <div class="col-lg-6 offset-lg-1 col-xl-5 offset-xl-1">
@@ -559,16 +528,16 @@
     </div>
     </div>
     </div>
-    <!-- End Software Benifits -->
+    <!-- End Red Mission Container-->
 
 
     <!-- Start CaseStudies -->
-    <section data-aos="fade-up"  id="caseStudies">
+    <section data-aos="fade-up" id="caseStudiesSection">
     <div class="container pb-100">
     <!-- Primera fila -->
     <div class="row">
         <div class="mt-80">
-            <h2>Case Studies</h2>
+            <h2 >Case Studies</h2>
             <p>
                 Plan upon yet way get cold spot its week. <br> Almost do am or limits hearts. Resolve parties.
             </p>
@@ -577,7 +546,7 @@
             <div class="portfolio-item mt-60">
                 <div class="portfolio-item xb-img-reveal-item mt-60" data-cat="Press Here"
                 data-title="VIEW CASE STUDY" data-fx="1">
-                    <div class=" image-1">
+                    <div class=" image-1" onclick="window.location.href='project-details.html';">
                         <div class="video-container" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
                             <video muted>
                                 <source src="https://cdn.sanity.io/files/r115idoc/production/1c651c5005c18a36ad53910194ff8cdb7fca24f7.mp4" type="video/mp4">
@@ -589,13 +558,13 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div >
             </div>
         </div>
         <div class="col-12 col-md-6 mt-80 mt-md-0">
             <div class="portfolio-item xb-img-reveal-item mt-60" data-cat="Press Here"
             data-title="VIEW CASE STUDY" data-fx="1">
-                <div class=" image-1">
+                <div class=" image-1" onclick="window.location.href='project-details.html';">
                     <div class="video-container" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
                         <video muted>
                             <source src="https://cdn.sanity.io/files/r115idoc/production/7435731992f8ed9ead2376968d08fcc02b005fd3.mp4" type="video/mp4">
@@ -615,7 +584,7 @@
         <div class="col-12 col-md-6">
             <div class="portfolio-item xb-img-reveal-item mt-60" data-cat="Press Here"
             data-title="VIEW CASE STUDY" data-fx="1">
-                <div class=" image-1">
+                <div class=" image-1" onclick="window.location.href='project-details.html';">
                     <div class="video-container" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
                         <video muted>
                             <source src="https://cdn.sanity.io/files/r115idoc/production/1c651c5005c18a36ad53910194ff8cdb7fca24f7.mp4" type="video/mp4">
@@ -632,7 +601,7 @@
         <div class="col-12 col-md-6 mt-80 mt-md-0">
             <div class="portfolio-item xb-img-reveal-item mt-60" data-cat="Press Here"
             data-title="VIEW CASE STUDY" data-fx="1">
-                <div class=" image-1">
+                <div class=" image-1" onclick="window.location.href='project-details.html';">
                     <div class="video-container" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
                         <video muted>
                             <source src="https://cdn.sanity.io/files/r115idoc/production/7435731992f8ed9ead2376968d08fcc02b005fd3.mp4" type="video/mp4">
@@ -648,16 +617,58 @@
         </div>
     </div>
     </div>
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-30">
+
+                <li class="button">
+                    <a href="project.html">View More</a>
+                </li>
+
+
+            </div>
+        </div>
     </section>
 
         
     <!-- End Case Studies -->
 
 
+    <!--Start Subbanner-->
 
-    <!-- Start Fun Factor Area
+        <div data-aos="fade-up" id="subBannerSection" class="business-banner overflow-hidden bg-cover " style="background-image: url(assets/img/shape/banner-6.jpg);">
+            <div class="container">
+                <div class="double-items">
+                    <div class="row align-center">
+
+                        <div class="col-lg-5 info mb-50">
+                            <h4>We are expert in this field</h4>
+                            <h2 class="xb-split-text split-in-right">Get smart way <br> for your business </h2>
+                            <p>
+                                Lasted hunted enough an up seeing in lively letter. Had judgment out opinions property the supplied.
+                            </p>
+                        </div>
+
+                        <div class="col-lg-6 offset-lg-1 business-banner-thumb mb-100">
+                            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.15/build/spline-viewer.js"></script>
+                            <spline-viewer  data-animate="fadeInDown"  url="https://prod.spline.design/qxhsH96LlvgTwAgD/scene.splinecode"></spline-viewer>                      
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!--End Subbanner-->
+
+
+    <!-- Start Number & Facts Container
     ============================================= -->
-    <div data-aos="fade-up"  class="fun-facts-area bg-gradient text-light  default-padding">
+    <div data-aos="fade-up" id="numberFactsSection" class="fun-facts-area bg-gradient text-light default-padding">
         <!-- Shape -->
         <div class="shape">
             <img src="assets/img/shape/map.png" alt="Image Not Found">
@@ -705,11 +716,11 @@
             </div>
         </div>
     </div>
-    <!-- End Fun Factor Area -->
+    <!-- End Number & Facts Container -->
 
     <!-- Start Testimonial 
     ============================================= -->
-    <div data-aos="fade-up"  class="testimonial-style-one-area default-padding">
+    <div data-aos="fade-up" id="testimonialSection" class="testimonial-style-one-area default-padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
@@ -733,7 +744,7 @@
                                     <div class="item">
                                         <div class="provider">
                                             <div class="thumb">
-                                                <img src="assets/img/800x800.png" alt="Image Not Found">
+                                                <img src="assets/img/reviewsImg/user-1.png" alt="Image Not Found">
                                             </div>
                                             <div class="info">
                                                 <h4>JURGEN K.</h4>
@@ -759,7 +770,7 @@
                                     <div class="item">
                                         <div class="provider">
                                             <div class="thumb">
-                                                <img src="assets/img/800x800.png" alt="Image Not Found">
+                                                <img src="assets/img/reviewsImg/user-2.png" alt="Image Not Found">
                                             </div>
                                             <div class="info">
                                                 <h4>ANTHO.</h4>
@@ -785,7 +796,7 @@
                                     <div class="item">
                                         <div class="provider">
                                             <div class="thumb">
-                                                <img src="assets/img/800x800.png" alt="Image Not Found">
+                                                <img src="assets/img/reviewsImg/user-3.png" alt="Image Not Found">
                                             </div>
                                             <div class="info">
                                                 <h4>METHO K.</h4>
@@ -811,7 +822,7 @@
                                     <div class="item">
                                         <div class="provider">
                                             <div class="thumb">
-                                                <img src="assets/img/800x800.png" alt="Image Not Found">
+                                                <img src="assets/img/reviewsImg/user-4.png" alt="Image Not Found">
                                             </div>
                                             <div class="info">
                                                 <h4>JURGEN K</h4>
@@ -843,29 +854,102 @@
 
 
 
-    <!-- Start Contact Us 
-    ============================================= -->
-    <div class="custom-container">
+    <!-- Start Faqs (Red Section)
+    ============================================= 
+    <div id="faqRedSection" class="custom-container">
         <div class="background-image-wrapper">
             <div class="background-image" style="background-image: url('assets/img/redTexture.webp');"></div>
         </div>
         <div class="row">
-            <div class="col-6">
+            <div class="col-12">
                 <div class="text-content">
-                    <h2>Let's Talk</h2>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="image-container">
-                    <img src="assets/img/cta-paper-plane-ill.svg" alt="Paper Plane Illustration">
-                </div>
+                    <div class="faq-area default-padding">
+                        <!-- End Shape 
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 text-center mb-30">
+                                    <h1 style="color: white;">Frequently Asked Question</h1>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-10 offset-lg-1 faq-style-one">
                 
+                                    <div class="accordion" id="faqAccordion">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    Where can I get analytics help?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        Bennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingTwo">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    How much does data analytics costs?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        Cennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingThree">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    What kind of data is needed for analysis?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        Tennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingFour">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                    How do I pay for your service?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        Sennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
     
+     End Faqs -->
+
+
+    <!-- Start Contact (white Section)
+    ============================================= -->
     
-    <div class="contact-area overflow-hidden default-padding" style="background-image: url(assets/img/shape/map.png);">
+    <div data-aos="fade-up" id="contactSection" class="contact-area overflow-hidden default-padding" style="background-image: url(assets/img/shape/map.png);">
         <div class="container">
             <div class="contact-box">
                 <div class="row align-center">
@@ -881,14 +965,14 @@
                                 <li class="animate" data-animate="fadeInUp">
                                     <div class="content">
                                         <h4 class="title">Phone</h4>
-                                        <a href="">++52 (777) 102 0339</a>
+                                        <a href="">+52 (777) 102 0339</a>
                                     </div>
                                 </li>
                                 <li class="animate" data-animate="fadeInUp" data-delay="300ms">
                                     <div class="info">
                                         <h4 class="title">Location</h4>
                                         <p>
-                                            San Jerónimo 207, Tlaltenango, Cuernavaca, Morelos, México                                        </p>
+                                            San Jerónimo 207, Tlaltenango, Cuernavaca, Morelos, México </p>
                                     </div>
                                 </li>
                                 <li class="animate" data-animate="fadeInUp" data-delay="600ms">
@@ -920,7 +1004,7 @@
                     <div class="col-tact-stye-one col-lg-6 offset-lg-1">
                         <div class="contact-form-style-one">
                             <h4 class="sub-title">Have Questions?</h4>
-                            <h2 class="title">Send us a Massage</h2>
+                            <h2 class="title">Send us a Message</h2>
                             <form action="assets/mail/contact.php" method="POST" class="contact-form contact-form">
                                 <div class="row">
                                     <div class="col-lg-12">
@@ -975,7 +1059,7 @@
 
     <!-- Start Footer 
     ============================================= -->
-    <footer class="bg-black text-light">
+    <footer id="footerSection" class="bg-black text-light">
         <div class="container">
             <div class="f-items default-padding-bottom pt-70 pt-xs-0">
                 <div class="row">
@@ -1056,7 +1140,7 @@
                     <!-- Singel Item -->
                     <div class="col-lg-3 col-md-6 footer-item mt-50">
                         <div class="f-item ">
-                            <strong>You Can Find Us At:</strong>
+                            <p>You Can <strong style="color: #c9182b;">Find Us</strong> At:</p>
                             <img src="assets/img/logo/aldea_completo.png" alt="AldeaCreativaLogo"  style="transform: scale(0.6)">
                     </div>
                     <!-- End Singel Item -->

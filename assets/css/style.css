@@ -1,12 +1,6 @@
 /* ----------------------------------
 
-Template Name: Metize - Startup & SaaS Template
-Author: validtheme
-Description:
-Version: 1.0
-
-Main Font    : Plus Jakarta Sans
-Main Color   : #3366FF
+Sodio.Net Webpage
 
 -------------------------------------
 
@@ -106,7 +100,7 @@ Sidebar heading:  22px 'Plus Jakarta Sans', sans-serif
 	--box-shadow-secondary: 0 10px 30px 0 rgba(44, 130, 237, 0.4);
 	--box-shadow-regular: 0px 2px 12px 0px #e7e7e7;
 	--bg-gray: #eaeff4;
-	--bg-gradient: linear-gradient(90deg, var(--color-primary)  20%, var(--color-secondary) 100%);
+	--bg-gradient: linear-gradient(90deg,#821a25 20%, #e22035 100%);
 	--text-gradient: linear-gradient(90deg, #A75BE2 0%,#76529B 45.714285714285715%,#43BADF 100%);
 }
 
@@ -235,6 +229,10 @@ pre {
 	line-height: 1.42857143;
 }
 
+.white-text{
+	color: white; 
+}
+
 input {
 	border: 1px solid #e7e7e7;
 	border-radius: inherit;
@@ -287,8 +285,50 @@ strong {
 	overflow: hidden;
 }
 
+/* Scrollbar Styles */ 
+/* Estilo para navegadores WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;  /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color del fondo de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #7c121c; /* Color del deslizador */
+    border-radius: 0px;  /* Hace el deslizador cuadrado */
+    border: 3px solid #f1f1f1; /* Espacio alrededor del deslizador */
+}
+
+/* Firefox */
+html {
+    scrollbar-width: thin; /* Grosor de la barra de desplazamiento */
+    scrollbar-color: #7c121c #f1f1f1; /* Color del deslizador y del fondo */
+}
+
+/* Edge, IE 10+ */
+body {
+    -ms-overflow-style: none; /* Oculta la barra de desplazamiento por defecto en IE */
+}
+
+body::-ms-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+body::-ms-scrollbar-track {
+    background: #f1f1f1; /* Color del fondo de la barra de desplazamiento */
+}
+
+body::-ms-scrollbar-thumb {
+    background-color: #7c121c; /* Color del deslizador */
+    border-radius: 0px;  /* Hace el deslizador cuadrado */
+    border: 3px solid #f1f1f1; /* Espacio alrededor del deslizador */
+}
+
+
 /* ============================================================== 
-    # Template Default Styles
+    # Default Styles
 =================================================================== */
 
 body {
@@ -302,7 +342,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: var(--color-heading);
+	color: #250408;
 	font-weight: 700;
 	line-height: 1.2;
 	font-family: var(--font-heading);
@@ -3799,11 +3839,83 @@ a.btn-round-animation.dark {
 =================================================================== */
 
 /* Banner Software */
+/* From Uiverse.io by neerajbaniwal */ 
+.btn-shine {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 12px 48px;
+	color: #fff;
+	background: linear-gradient(to right, #dedede 0, #fff 10%, #c1c1c1 20%);
+	background-position: 0;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: shine 3s infinite linear;
+	animation-fill-mode: forwards;
+	-webkit-text-size-adjust: none;
+	font-weight: 600;
+	font-size: 24px;
+	text-decoration: none;
+	white-space: nowrap;
+	font-family: "Poppins", sans-serif;
+  }
+  @-moz-keyframes shine {
+	0% {
+	  background-position: 0;
+	}
+	60% {
+	  background-position: 180px;
+	}
+	100% {
+	  background-position: 180px;
+	}
+  }
+  @-webkit-keyframes shine {
+	0% {
+	  background-position: 0;
+	}
+	60% {
+	  background-position: 180px;
+	}
+	100% {
+	  background-position: 180px;
+	}
+  }
+  @-o-keyframes shine {
+	0% {
+	  background-position: 0;
+	}
+	60% {
+	  background-position: 180px;
+	}
+	100% {
+	  background-position: 180px;
+	}
+  }
+  @keyframes shine {
+	0% {
+	  background-position: 0;
+	}
+	60% {
+	  background-position: 180px;
+	}
+	100% {
+	  background-position: 180px;
+	}
+  }
+  
+  .btn-shine:hover{
+	color: #791212;
+
+  }
 
 .banner-software {
 	background-size: cover;
 	background-position: bottom center;
 	background-repeat: no-repeat;
+	margin-bottom: 30em; /* Ajusta este valor según sea necesario */
+
 }
 
 .banner-software .content-box {
@@ -4140,10 +4252,9 @@ a.btn-round-animation.dark {
 }
 
 .feature-alert {
-	background: #eeeeee;
+	background: #ffe1e4;
 	padding: 50px;
 	border-radius: 30px;
-	border: 2px solid;
 }
 
 .feature-alert p {
@@ -4220,7 +4331,7 @@ a.btn-round-animation.dark {
 	height: 500px;
 	width: 500px;
 	transform: translateX(-50%);
-	background: linear-gradient(90deg, #ff8383  60%, #ff1212 100%);
+	background: linear-gradient(90deg, #ff838300  60%, #ff121200 100%);
 	z-index: -1;
 	border-radius: 50%;
 	filter: blur(120px);
@@ -4250,13 +4361,17 @@ a.btn-round-animation.dark {
 }
 
 .overview-content {
-	background: var(--white);
+	background-color: rgba(255, 255, 255, 0.085) ;
 	position: absolute;
 	right: 0;
 	bottom: 0;
 	padding: 50px;
-	border: 2px solid #00ffc4;
+	backdrop-filter: blur(5px);
+	border: 1px solid #00000006;
 	border-radius: 10px;
+	box-shadow: -16px 36px 65px -41px rgba(0,0,0,0.4);
+-webkit-box-shadow: -16px 36px 65px -41px rgba(0, 0, 0, 0.175);
+-moz-box-shadow: -16px 36px 65px -41px rgba(0,0,0,0.4);
 	max-width: 40%;
 }
 
@@ -4836,8 +4951,12 @@ ul.list-double {
 
 .testimonial-style-one-item {
 	padding: 50px;
-	background: var(--white);
+	background-color:rgba(255, 255, 255, 0.295);
 	border-radius: 15px;
+	backdrop-filter: blur(20px);
+	box-shadow: 2px 17px 100px -53px rgba(0, 0, 0, 0.127);
+-webkit-box-shadow: 2px 17px 100px -53px rgba(0, 0, 0, 0.115);
+-moz-box-shadow: 2px 17px 100px -53px rgba(0, 0, 0, 0.163);
 	border: 1px solid #e7e7e7;
 }
 
@@ -4904,7 +5023,7 @@ ul.list-double {
 
 .testimonial-style-one-item .review i {
 	display: inline-block;
-	color: #FFC107;
+	color: #991212;
 	margin-right: 5px;
 }
 
@@ -6919,6 +7038,8 @@ ul.check-list-item li::after {
 	border-radius: 10px;
 }
 
+
+
 .portfolio-style-one-single .info {
 	position: absolute;
 	left: 30px;
@@ -6933,6 +7054,8 @@ ul.check-list-item li::after {
 	border-radius: 10px;
 	border-top-left-radius: 0;
 }
+
+.xb-img-reveal-item
 
 .portfolio-style-one-single .info h4 {
 	margin-bottom: 5px;
@@ -9609,4 +9732,146 @@ footer .f-item.link li a:hover {
 	transform: scale(1.6) translateX(-50%) translateY(-50%); 
   }
   
+
+
+  #subBannerSection {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+}
+
+#subBannerSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08; 
+    z-index: -1;
+    filter: brightness(0.3); /* Opcional: ajusta el brillo si es necesario */
+}
+
+  /* Gooey */ 
+
+#gooey {
+	position: absolute;
+	width: 25vw;
+	height: 25vw;
+	top: 750%;
+	left: 25%;
+	border-radius: 50%;
+	filter: blur(50px);
+	animation-name: gooey;
+	animation-duration: 6s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	background: linear-gradient(#920b0dc1, #810f0fd9);
+}
+
+@keyframes gooey {
+	from {
+		filter: blur(500px);
+		transform: translate(10%, -10%) skew(0);
+	}
+
+	to {
+		filter: blur(500px);
+		transform: translate(-10%, 10%) skew(-12deg);
+	}
+}
+
+
+/*  Background Noise  */ 
+
+.grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+  pointer-event: none;
+  z-index: -200 ;
+  transform: translateZ(0);
   
+  &:before {
+    content: "";
+    top: -10rem;
+    left: -10rem;
+    width: calc(100% + 20rem);
+    height: calc(100% + 20rem);
+    z-index: 9999;
+    position: fixed;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
+    opacity: 0.25;
+    pointer-events: none;
+    -webkit-animation: noise 1s steps(2) infinite;
+    animation: noise 1s steps(2) infinite;
+  }
+
+  @-webkit-keyframes noise {
+    to { transform: translate3d(-7rem,0,0) }
+  }
+
+  @keyframes noise {
+    0% { transform: translate3d(0,9rem,0) }
+    10% { transform: translate3d(-1rem,-4rem,0) }
+    20% { transform: translate3d(-8rem,2rem,0) }
+    30% { transform: translate3d(9rem,-9rem,0) }
+    40% { transform: translate3d(-2rem,7rem,0) }
+    50% { transform: translate3d(-9rem,-4rem,0) }
+    60% { transform: translate3d(2rem,6rem,0) }
+    70% { transform: translate3d(7rem,-8rem,0) }
+    80% { transform: translate3d(-9rem,1rem,0) }
+    90% { transform: translate3d(6rem,-5rem,0) }
+    to { transform: translate3d(-7rem,0,0) }
+  }
+}
+
+
+#mainServicesSection{
+	background-color: white;
+}
+
+
+/* GSAP About Us Gallery */
+
+.horiz-gallery-strip, .horiz-gallery-wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	will-change: transform;
+	position:relative;
+  }
+  
+  .project-wrap {
+	width: 50vw;
+	padding: 2rem;
+	box-sizing: content-box;
+  }
+  
+  .project-wrap img {
+	width:100%;
+	height:auto;
+  }
+.br-20{
+	border-radius: 20px;
+}
+
+.br-20-hover {
+	border-radius: 20px;
+	transition: all 0.3s ease-in-out;
+  }
+  
+  .br-20-hover:hover {
+padding: 2%;  }
+
+#custom-cursor-about {
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
