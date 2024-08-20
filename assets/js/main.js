@@ -697,3 +697,51 @@
 	  document.querySelector('.portfolio-section').addEventListener('mouseenter', function () {
 		document.querySelector('.cursor_cursor').style.display = 'grid';
 	  });
+
+
+
+
+	  document.addEventListener("DOMContentLoaded", function() {
+		const slides = document.querySelectorAll(".slide-projects");
+		const image = document.querySelector(".slider__image-projects");
+	
+		if (slides.length > 0 && image) {
+			slides.forEach(slide => {
+				slide.addEventListener("mouseenter", (e) => {
+					const imgSrc = slide.querySelector("img").getAttribute("data-src");
+					if (imgSrc) {
+						image.src = imgSrc;
+						gsap.to(image, {
+							opacity: 1,
+							visibility: 'visible',
+							duration: 0.3,
+							x: e.clientX,
+							y: e.clientY - 125, // Ajusta la posición vertical según sea necesario
+							ease: "power2.out"
+						});
+					}
+				});
+	
+				slide.addEventListener("mouseleave", () => {
+					gsap.to(image, {
+						opacity: 0,
+						visibility: 'hidden',
+						duration: 0.3,
+						ease: "power2.out"
+					});
+				});
+	
+				slide.addEventListener("mousemove", (e) => {
+					gsap.to(image, {
+						x: e.clientX,
+						y: e.clientY - 125, // Ajusta la posición vertical según sea necesario
+						duration: 0.1,
+						ease: "power2.out"
+					});
+				});
+			});
+		} else {
+			console.error("No se encontraron elementos con las clases '.slide-projects' o '.slider__image-projects'");
+		}
+	});
+	
