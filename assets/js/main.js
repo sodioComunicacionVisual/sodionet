@@ -643,105 +643,172 @@
 		});
 	});
 
-	// GSAP AboutUs Gallery
 
-	gsap.registerPlugin(ScrollTrigger);
 
-	document.addEventListener("DOMContentLoaded", function() {
-	  if (document.getElementById("portfolio")) {
-		const horizontalSections = gsap.utils.toArray('.horiz-gallery-wrapper');
-	
-		horizontalSections.forEach(function (sec) {
-	
-		  const pinWrap = sec.querySelector(".horiz-gallery-strip");
-	
-		  let pinWrapWidth;
-		  let horizontalScrollLength;
-	
-		  function refresh() {
-			pinWrapWidth = pinWrap.scrollWidth;
-			horizontalScrollLength = pinWrapWidth - window.innerWidth;
-		  }
-	
-		  refresh();
-		  
-		  gsap.to(pinWrap, {
-			scrollTrigger: {
-			  scrub: true,
-			  trigger: sec,
-			  pin: sec,
-			  start: "center center",
-			  end: () => `+=${pinWrapWidth}`,
-			  invalidateOnRefresh: true
-			},
-			x: () => -horizontalScrollLength,
-			ease: "none"
-		  });
-	
-		  ScrollTrigger.addEventListener("refreshInit", refresh);
-		});
-	  }
-	});
-	
+	//Gsap StrokeText
+	var mySplitText = new SplitText("#citation");
 
-	document.querySelector('.portfolio-section').addEventListener('mousemove', function (e) {
-		const cursor = document.querySelector('.cursor_cursor');
-		cursor.style.left = e.clientX + 'px';
-		cursor.style.top = e.clientY + 'px';
-	  });
-	  
-	  document.querySelector('.portfolio-section').addEventListener('mouseleave', function () {
-		document.querySelector('.cursor_cursor').style.display = 'none';
-	  });
-	  
-	  document.querySelector('.portfolio-section').addEventListener('mouseenter', function () {
-		document.querySelector('.cursor_cursor').style.display = 'grid';
-	  });
+	function animation() {
+	TweenMax.staggerFrom(mySplitText.chars, 0.5, {opacity: 0, y:-20, ease: Back.easeInOut}, 0.07);
+	}
+	
+	animation()
 
 
 
 
-	  document.addEventListener("DOMContentLoaded", function() {
-		const slides = document.querySelectorAll(".slide-projects");
-		const image = document.querySelector(".slider__image-projects");
 	
-		if (slides.length > 0 && image) {
-			slides.forEach(slide => {
-				slide.addEventListener("mouseenter", (e) => {
-					const imgSrc = slide.querySelector("img").getAttribute("data-src");
-					if (imgSrc) {
-						image.src = imgSrc;
-						gsap.to(image, {
-							opacity: 1,
-							visibility: 'visible',
-							duration: 0.3,
-							x: e.clientX,
-							y: e.clientY - 125, // Ajusta la posición vertical según sea necesario
-							ease: "power2.out"
-						});
-					}
-				});
-	
-				slide.addEventListener("mouseleave", () => {
-					gsap.to(image, {
-						opacity: 0,
-						visibility: 'hidden',
-						duration: 0.3,
-						ease: "power2.out"
-					});
-				});
-	
-				slide.addEventListener("mousemove", (e) => {
-					gsap.to(image, {
-						x: e.clientX,
-						y: e.clientY - 125, // Ajusta la posición vertical según sea necesario
-						duration: 0.1,
-						ease: "power2.out"
-					});
-				});
-			});
-		} else {
-			console.error("No se encontraron elementos con las clases '.slide-projects' o '.slider__image-projects'");
-		}
-	});
-	
+//FirstScrollText (Red)
+gsap.registerPlugin(ScrollTrigger);
+
+const textElements = gsap.utils.toArray('.scrolltext, .scrolltext2');
+
+textElements.forEach(text => {
+  gsap.to(text, {
+    backgroundSize: '100%',
+    ease: 'power2.inOut',
+    scrollTrigger: {
+      trigger: text,
+      start: 'center 80%',
+      end: 'center 30%', 
+      scrub: 1.5,       
+    },
+  });
+});
+
+
+
+// GSAP AboutUs Gallery
+gsap.registerPlugin(ScrollTrigger);
+
+document.addEventListener("DOMContentLoaded", function() {
+  if (document.getElementById("portfolio")) {
+    const horizontalSections = gsap.utils.toArray('.horiz-gallery-wrapper');
+
+    horizontalSections.forEach(function (sec) {
+      const pinWrap = sec.querySelector(".horiz-gallery-strip");
+
+      let pinWrapWidth;
+      let horizontalScrollLength;
+
+      function refresh() {
+        pinWrapWidth = pinWrap.scrollWidth;
+        horizontalScrollLength = pinWrapWidth - window.innerWidth;
+      }
+
+      refresh();
+      
+      gsap.to(pinWrap, {
+        scrollTrigger: {
+          scrub: true,
+          trigger: sec,
+          pin: sec,
+          start: "center center",
+          end: () => `+=${pinWrapWidth}`,
+          invalidateOnRefresh: true
+        },
+        x: () => -horizontalScrollLength,
+        ease: "none"
+      });
+
+      ScrollTrigger.addEventListener("refreshInit", refresh);
+    });
+  }
+
+  // Cursor Customization in Portfolio Section
+  document.querySelector('.portfolio-section').addEventListener('mousemove', function (e) {
+    const cursor = document.querySelector('.cursor_cursor');
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+  
+  document.querySelector('.portfolio-section').addEventListener('mouseleave', function () {
+    document.querySelector('.cursor_cursor').style.display = 'none';
+  });
+  
+  document.querySelector('.portfolio-section').addEventListener('mouseenter', function () {
+    document.querySelector('.cursor_cursor').style.display = 'grid';
+  });
+
+  // Image Hover Effect in Slider
+  const slides = document.querySelectorAll(".slide-projects");
+  const image = document.querySelector(".slider__image-projects");
+
+  if (slides.length > 0 && image) {
+    slides.forEach(slide => {
+      slide.addEventListener("mouseenter", (e) => {
+        const imgSrc = slide.querySelector("img").getAttribute("data-src");
+        if (imgSrc) {
+          image.src = imgSrc;
+          gsap.to(image, {
+            opacity: 1,
+            visibility: 'visible',
+            duration: 0.3,
+            x: e.clientX,
+            y: e.clientY - 125,
+            ease: "power2.out"
+          });
+        }
+      });
+
+      slide.addEventListener("mouseleave", () => {
+        gsap.to(image, {
+          opacity: 0,
+          visibility: 'hidden',
+          duration: 0.3,
+          ease: "power2.out"
+        });
+      });
+
+      slide.addEventListener("mousemove", (e) => {
+        gsap.to(image, {
+          x: e.clientX,
+          y: e.clientY - 125,
+          duration: 0.1,
+          ease: "power2.out"
+        });
+      });
+    });
+  } else {
+    console.error("No se encontraron elementos con las clases '.slide-projects' o '.slider__image-projects'");
+  }
+
+  // Marquee Strip
+  setTimeout(() => {
+    const cardsContainer = document.querySelector("#marquee-text");
+
+    // Duplicate the cards (for wrapping purposes)
+    cardsContainer.innerHTML += cardsContainer.innerHTML;
+
+    // Get the DOM references
+    const cards = gsap.utils.toArray("#marquee-text .item_marquee");
+
+    function setAnimValues() {
+      // Get the correct width
+      const cardWidth = innerWidth / (cards.length / 2);
+      
+      // Set the default position
+      cards.forEach((card, i) => 
+        gsap.set(card, {
+          x: () => i * cardWidth,
+          overwrite: "auto"
+        })
+      );
+      
+      // Animate the cards
+      gsap.to(cards, {
+        duration: 20,
+        ease: "none",
+        x: `+=${innerWidth}`,
+        repeat: -1,
+        // Wrap the cards when appropriate
+        modifiers: {
+          x: gsap.utils.unitize(gsap.utils.wrap(-cardWidth, innerWidth * 2 - cardWidth), "px")
+        },
+      });
+    }
+
+    window.addEventListener("resize", setAnimValues);
+    setAnimValues();
+  }, 500); // Delay to ensure other animations are ready
+});
