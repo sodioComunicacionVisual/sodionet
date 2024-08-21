@@ -42,6 +42,7 @@
 
 <body>
     <div id="gooey"></div>
+    <div id="gooey2"></div>
     <div class="grain"></div>
     <!-- Start Preloader 
     ============================================= -->
@@ -142,40 +143,40 @@
     <!-- End Header -->
 
       
-    <!-- Start Banner Area 
-    ============================================= -->
+    <!-- Start Banner Area -->
     <section id="heroBannerAreaSection">
-        <div class="banner-software text-center text-light" >
-        <video id="bannervideo" class="ukiyo" autoplay muted loop id="bg-video" style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: -1; border-radius: 0 0 10px 10px;">
-            <source src="assets/img/BannerOpt1.mp4" type="video/mp4">
-            Your Browser Doesn't Dupport This Video
-        </video>        <div class="container">
+        <div class="banner-software text-center text-light">
+            <video id="bannervideo" class="ukiyo" autoplay muted loop id="bg-video" style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: -1; border-radius: 0 0 10px 10px;">
+                <source src="assets/img/BannerOpt1.mp4" type="video/mp4">
+                Your Browser Doesn't Support This Video
+            </video>
+
+            <!-- Líneas descendentes -->
+            <div class="lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
+            <div class="container">
                 <div class="content-box">
                     <div class="row align-center">
                         <div class="col-lg-8 offset-lg-2 info">
                             <h2 class="xb-split-text split-in-right">We Are a Passionate Creative Design Agency</h2>
-                            <p>
-                                Lasted hunted enough an up seeing in lively letter. Had judgment out opinions property the supplied.
-                            </p>
- 
+                            <p>Lasted hunted enough an up seeing in lively letter. Had judgment out opinions property the supplied.</p>
                         </div>
-
                     </div>
-
                     <div class="row align-center">
                         <div class="col-lg-12 offset-lg-2 info">
-
                             <a href="#capabilitiesSection" class="btn-shine">Read More</a>
-
- 
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Banner -->
+    <!-- End Banner Area -->
+
 
     <!-- Our Capabilities
     ============================================= -->
@@ -186,7 +187,11 @@
             <div class="row">
                 <div class="col-lg-4">
                     <h4 class="sub-title">Our Strenghts</h4>
-                    <h2 class="title mb-30 mb-md-50 xb-split-text split-in-right">We Are a Big Team</h2>
+                    <div class="textcontainer">
+                        <span class="particletext confetti">We Are a Big Team</span>
+                     </div>
+                     
+
                     <div class="feature-alert">
                         <p>
                             We embarked on our journey in Cuernavaca, Mexico, in 1998. Working on diverse projects across multiple industries, we transitioned from traditional analog frameworks to immersive virtual environments.
@@ -205,7 +210,7 @@
                         <!-- Single item -->
                         <div class="col-md-6 mb-30">
                             <div class="feature-style-one-item animate" data-animate="fadeInUp">
-                                <i class="fas fa-clock"></i>
+                                <i class="fas fa-clock hoverEffect"></i>
                                 <h4>TimeZone </h4>
                                 <p>
                                     Based in Mexico and operating in the CST time zone, we have successfully undertaken projects worldwide, adeptly adapting to different time zones.
@@ -216,7 +221,7 @@
                         <!-- Single item -->
                         <div class="col-md-6 mb-30">
                             <div class="feature-style-one-item animate" data-animate="fadeInUp">
-                                <i class="fas fa-cog"></i>
+                                <i class="fas fa-cog hoverEffect"></i>
                                 <h4>Multidisciplinary Teams </h4>
                                 <p>
                                     While we share a solid foundation in design, each of us specializes in different areas. This diversity enables us to deliver versatile results and tackle a wide range of projects.                                </p>
@@ -226,7 +231,7 @@
                         <!-- Single item -->
                         <div class="col-md-6 mb-30">
                             <div class="feature-style-one-item animate" data-animate="fadeInUp" data-delay="300ms">
-                                <i class="fas fa-lightbulb-on"></i>
+                                <i class="fas fa-lightbulb-on hoverEffect"></i>
                                 <h4>Client Knowledge </h4>
                                 <p>
                                     With experience across diverse industries, we quickly gain in-depth insights into our clients, their businesses, and their respective fields.                                </p>
@@ -236,7 +241,7 @@
                         <!-- Single item -->
                         <div class="col-md-6 mb-30">
                             <div class="feature-style-one-item animate" data-animate="fadeInUp" data-delay="300ms">
-                                <i class="fas fa-handshake-alt"></i>
+                                <i class="fas fa-handshake-alt hoverEffect"></i>
                                 <h4>Friendly Process</h4>
                                 <p>
                                     We cultivate a collaborative and creative working environment, prioritizing both enjoyment and efficiency for all participants, while remaining proactive throughout the process.                                </p>
@@ -260,7 +265,7 @@
 
     <!-- Start Main Services
     ============================================= -->
-    <div class="container-fluid bg-white">
+    <div id="mainServicesSectionHeader" class="container-fluid bg-white">
         <div class="row">
             <div class="col-lg-8 offset-lg-2 mt-50">
                 <div class="site-heading text-center">
@@ -556,7 +561,7 @@
 
                     <div class="project-wrap">
 
-                            <div class="image-1" onclick="window.location.href='project-details.html';">
+                            <div  onclick="window.location.href='project-details.html';">
                                 <div class="video-container" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
                                     <video muted>
                                         <source src="https://cdn.sanity.io/files/r115idoc/production/7435731992f8ed9ead2376968d08fcc02b005fd3.mp4" type="video/mp4">
@@ -573,13 +578,13 @@
                 
                     <div class="project-wrap">
 
-                            <div class=" image-1" onclick="window.location.href='project-details.html';">
+                            <div onclick="window.location.href='project-details.html';">
                                 <div class="video-container" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
                                     <video muted>
                                         <source src="https://cdn.sanity.io/files/r115idoc/production/7435731992f8ed9ead2376968d08fcc02b005fd3.mp4" type="video/mp4">
                                         Tu navegador no soporta la reproducción de videos.
                                     </video>
-                                    <img src="https://static.wixstatic.com/media/bc0394_63a354d747434950b39e3071994f9ee1~mv2.webp" alt="Imagen al pausar">
+                                    <img src="assets/img/clients/Pinnacleogo.png" alt="Imagen al pausar">
 
                                 </div>
                                 <div class="xb-item--holder">
@@ -590,14 +595,13 @@
                     </div>
                     <div class="project-wrap">
 
-                            <div class=" image-1" onclick="window.location.href='project-details.html';">
+                            <div onclick="window.location.href='project-details.html';">
                                 <div class="video-container" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
                                     <video muted>
                                         <source src="https://cdn.sanity.io/files/r115idoc/production/7435731992f8ed9ead2376968d08fcc02b005fd3.mp4" type="video/mp4">
                                         Tu navegador no soporta la reproducción de videos.
                                     </video>
-                                    <img src="https://static.wixstatic.com/media/bc0394_63a354d747434950b39e3071994f9ee1~mv2.webp" alt="Imagen al pausar">
-
+                                    <img src="assets/img/clients/elRollo.png" alt="Imagen al pausar">
                                 </div>
                                 <div class="xb-item--holder">
                                     <h3 class="xb-item--title">Maralina Harless <br> <span>Fashion Designer</span></h3>
@@ -607,13 +611,13 @@
                     </div>
                     <div class="project-wrap">
 
-                            <div class=" image-1" onclick="window.location.href='project-details.html';">
+                            <div onclick="window.location.href='project-details.html';">
                                 <div class="video-container" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
                                     <video muted>
                                         <source src="https://cdn.sanity.io/files/r115idoc/production/7435731992f8ed9ead2376968d08fcc02b005fd3.mp4" type="video/mp4">
                                         Tu navegador no soporta la reproducción de videos.
                                     </video>
-                                    <img src="https://static.wixstatic.com/media/bc0394_63a354d747434950b39e3071994f9ee1~mv2.webp" alt="Imagen al pausar">
+                                    <img src="assets/img/clients/Latizlogo.png" alt="Imagen al pausar">
 
                                 </div>
                                 <div class="xb-item--holder">
@@ -622,6 +626,38 @@
                             </div>
                             
                     </div>
+                    <div class="project-wrap">
+
+                        <div onclick="window.location.href='project-details.html';">
+                            <div class="video-container" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+                                <video muted>
+                                    <source src="https://cdn.sanity.io/files/r115idoc/production/7435731992f8ed9ead2376968d08fcc02b005fd3.mp4" type="video/mp4">
+                                    Tu navegador no soporta la reproducción de videos.
+                                </video>
+                                <img src="assets/img/clients/SinfonicadeMineria.png" alt="Imagen al pausar">
+                            </div>
+                            <div class="xb-item--holder">
+                                <h3 class="xb-item--title">Maralina Harless <br> <span>Fashion Designer</span></h3>
+                            </div>
+                        </div>
+                                    
+                </div>
+                <div class="project-wrap">
+
+                    <div onclick="window.location.href='project-details.html';">
+                        <div class="video-container" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+                            <video muted>
+                                <source src="https://cdn.sanity.io/files/r115idoc/production/7435731992f8ed9ead2376968d08fcc02b005fd3.mp4" type="video/mp4">
+                                Tu navegador no soporta la reproducción de videos.
+                            </video>
+                            <img src="assets/img/clients/toYou.png" alt="Imagen al pausar">
+                        </div>
+                        <div class="xb-item--holder">
+                            <h3 class="xb-item--title">Maralina Harless <br> <span>Fashion Designer</span></h3>
+                        </div>
+                    </div>
+                                
+            </div>
 
                 </div>
             </div>
@@ -635,7 +671,7 @@
     <!-- End CaseStudies Gallery -->
 
     <!--Start Subbanner-->
-    <div data-aos="fade-up" id="subBannerSection" class="business-banner overflow-hidden bg-cover " ">
+    <div  id="subBannerSection" class="business-banner overflow-hidden bg-cover " ">
         <div class="container">
             <div class="double-items">
                 <div class="row align-center">
@@ -646,10 +682,13 @@
                         <p>
                             Lasted hunted enough an up seeing in lively letter. Had judgment out opinions property the supplied.
                         </p>
+                        <a href="#contactSection">
+                            <button>Meet the Team</button>
+                        </a>   
                     </div>
 
-                    <div class="col-lg-6 offset-lg-1 business-banner-thumb mb-100">
-                        <img src="assets/img/Captura de Pantalla 2024-08-21 a la(s) 13.42.10.png" alt="Captura de pantalla de la fecha 2024-08-21 a las 13.42.10" />
+                    <div data-aos="fade-up" class="col-lg-6 offset-lg-1 business-banner-thumb mb-100">
+                        <img class="br-20-hover" src="assets/img/IMG_6352.jpg" alt="TeamPic" />
 
 
                         </div>
@@ -658,8 +697,6 @@
                 </div>
             </div>
     </div>
-
-
     <!--End Subbanner-->
 
 
@@ -848,13 +885,8 @@
     </div>
     <!-- End Testimonial -->
 
-
-
-
-
     <!-- Start Contact (white Section)
     ============================================= -->
-    
     <div id="contactSection" class="contact-area overflow-hidden default-padding" style="background-image: url(assets/img/shape/map.png);">
         <div class="container">
             <div class="contact-box">
@@ -961,120 +993,117 @@
     </div>
     <!-- End Contact -->
 
+<!-- Start Footer 
+============================================= -->
+<footer data-aos="fade-up" id="footerSection" class="bg-black text-light" style="position: relative;">
+    
+    <!-- Líneas descendentes -->
+    <div style="opacity: 0.3;" class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
 
-
-
-      
-      
-
-    <!-- Start Footer 
-    ============================================= -->
-    <footer  data-aos="fade-up"  id="footerSection" class="bg-black text-light">
-        <div class="container">
-            <div class="f-items default-padding-bottom pt-70 pt-xs-0">
-                <div class="row">
-                    <!-- Singel Item -->
-                    <div class="col-lg-3 col-md-6 footer-item mt-50">
-                        <div class="f-item about ">
-                            <img  src="assets/img/brand/WhiteLogo.webp" class="logo logo-display" alt="Logo" style="transform: scale(0.6);">
-                            <p>
-                                Are off under folly death writter transforming cold regular. Almost do am or limits of hearts.
-                            </p>
-                            <div class="footer-social mt-30">
-                                <ul>
-                                    <li><a target="_blank" href="https://www.facebook.com/sodio.dg/"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a target="_blank" href="https://www.instagram.com/sodio_desde_1998/"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a target="_blank" href="https://www.linkedin.com/company/sodio-comunicaci-n-visual/?originalSubdomain=mx"><i class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Singel Item -->
-
-                    <!-- Singel Item -->
-                    <div class="col-lg-3 col-md-6 mt-50 footer-item pl-50 pl-md-15 pl-xs-15">
-                        <div class="f-item link">
-                            <h4 class="widget-title">Company</h4>
-                            <ul>
-                                <li>
-                                    <a href="about-us.html">Compnay Profile</a>
-                                </li>
-                                <li>
-                                    <a href="about-us.html">About</a>
-                                </li>
-                                <li>
-                                    <a href="contact-us.html">Help Center</a>
-                                </li>
-                                <li>
-                                    <a href="contact-us.html">Career</a>
-                                </li>
-                                <li>
-                                    <a href="about-us.html">Features</a>
-                                </li>
-                                <li>
-                                    <a href="contact-us.html">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- End Singel Item -->
-
-                    <!-- Singel Item -->
-                    <div class="col-lg-3 col-md-6 footer-item  mt-50">
-                        <div class="f-item contact">
-                            <h4 class="widget-title">Contact Info</h4>
-                            <ul>
-                                <li>
-                                    <div class="content">
-                                        <strong>Address:</strong>
-                                        San Jerónimo 207, Tlaltenango, Cuernavaca, Morelos, México 
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="content">
-                                        <strong>Email:</strong>
-                                        <a href="mailto:info@validtheme.com">info@sodio.net</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="content">
-                                        <strong>Phone:</strong>
-                                        <a href="tel:2151234567">+52(777)102 0339</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- End Singel Item -->
-
-                    <!-- Singel Item -->
-                    <div class="col-lg-3 col-md-6 footer-item mt-50">
-                        <div class="f-item ">
-                            <p>You Can <strong style="color: #c9182b;">Find Us</strong> At:</p>
-                            <img src="assets/img/logo/aldea_completo.png" alt="AldeaCreativaLogo"  style="transform: scale(0.6)">
-                    </div>
-                    <!-- End Singel Item -->
-
-
-                </div>
-            </div>
-        </div>
-        
-        <!-- Footer Bottom -->
-        <div class=" bg-black text-light text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
+    <div class="container">
+        <div class="f-items default-padding-bottom pt-70 pt-xs-0">
+            <div class="row">
+                <!-- Singel Item -->
+                <div class="col-lg-3 col-md-6 footer-item mt-50">
+                    <div class="f-item about ">
+                        <a href="#heroBannerAreaSection">
+                            <img src="assets/img/brand/WhiteLogo.webp" class="logo logo-display" alt="Logo" style="transform: scale(0.6);position: relative;right: 2.2em;">
+                        </a>
                         <p>
-                            Copyright &copy; 2024 Sodio Comunicación Visual. All Rights Reserved
+                            Are off under folly death writter transforming cold regular. Almost do am or limits of hearts.
                         </p>
+                        <div class="footer-social mt-30">
+                            <ul>
+                                <li><a target="_blank" href="https://www.facebook.com/sodio.dg/"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a target="_blank" href="https://www.instagram.com/sodio_desde_1998/"><i class="fab fa-instagram"></i></a></li>
+                                <li><a target="_blank" href="https://www.linkedin.com/company/sodio-comunicaci-n-visual/?originalSubdomain=mx"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
+                </div>
+                <!-- End Singel Item -->
+
+                <!-- Singel Item -->
+                <div class="col-lg-3 col-md-6 mt-50 footer-item pl-50 pl-md-15 pl-xs-15">
+                    <div class="f-item link">
+                        <h4 class="widget-title">Useful Links</h4>
+                        <ul>
+                            <li>
+                                <a href="about-us.html">About Us</a>
+                            </li>
+                            <li>
+                                <a href="project.html">Projects</a>
+                            </li>
+                            <li>
+                                <a href="#heroBannerAreaSection">Back to Top</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End Singel Item -->
+
+                <!-- Singel Item -->
+                <div class="col-lg-3 col-md-6 footer-item mt-50">
+                    <div class="f-item contact">
+                        <h4 class="widget-title">Contact Info</h4>
+                        <ul>
+                            <li>
+                                <div class="content">
+                                    <strong>Address:</strong>
+                                    San Jerónimo 207, Tlaltenango, Cuernavaca, Morelos, México 
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <strong>Email:</strong>
+                                    <a href="mailto:info@validtheme.com">info@sodio.net</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <strong>Phone:</strong>
+                                    <a href="tel:2151234567">+52(777)102 0339</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End Singel Item -->
+
+                <!-- Singel Item -->
+                <div class="col-lg-3 col-md-6 footer-item mt-50">
+                    <div class="f-item">
+                        <p>You Can <strong style="color: #c9182b;">Find Us</strong> At:</p>
+                        <a href="https://maps.app.goo.gl/RpwGdyLZRfzy1u8C6" target="_blank">
+                            <img src="assets/img/logo/aldea_completo.png" alt="AldeaCreativaLogo" style="transform: scale(0.6);position:relative;right: 4em;">
+                        </a>
+                    </div>
+                </div>
+                <!-- End Singel Item -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="bg-black text-light text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>
+                        Copyright &copy; 2024 Sodio Comunicación Visual. All Rights Reserved
+                    </p>
                 </div>
             </div>
         </div>
-        <!-- End Footer Bottom -->
-    </footer>
-    <!-- End Footer -->
+    </div>
+    <!-- End Footer Bottom -->
+</footer>
+<!-- End Footer -->
+
     
 
     <!-- Custom Cursor-->
@@ -1102,31 +1131,7 @@
     <!--Custom Cursor "Testimonials"-->
     <div class="button-cursor3" id="cursor3">
         <div class="button__circle-cursor3">
-            <svg
-                viewBox="0 0 14 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="button__icon-cursor3"
-                width="14"
-            >
-                <path
-                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                    fill="black"
-                ></path>
-            </svg>
-
-            <svg
-                viewBox="0 0 14 15"
-                fill="none"
-                width="14"
-                xmlns="http://www.w3.org/2000/svg"
-                class="button__icon-cursor3 button__icon--copy-cursor3"
-            >
-                <path
-                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                    fill="black"
-                ></path>
-            </svg>
+            <img src="assets/img/icon/006-resize.png" style="transform: scale(0.6);">
         </div>
     </div>
 

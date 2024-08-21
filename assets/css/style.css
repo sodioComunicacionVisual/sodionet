@@ -4310,8 +4310,9 @@ a.btn-round-animation.dark {
 }
 
 .feature-alert {
-	background: #ffe1e4;
+	background: #f7f7f7ae;
 	padding: 50px;
+	backdrop-filter: blur(30px);
 	border-radius: 30px;
 }
 
@@ -4900,7 +4901,6 @@ ul.list-double li::after {
 	color: var(--dark);
 	border-radius: 50%;
 	font-size: 12px;
-	border: 1px solid var(--color-primary);
 	transition: all 0.35s ease-in-out;
 }
 
@@ -9686,6 +9686,7 @@ footer .f-item.link li a:hover {
 	max-width: 500px;
 	height: auto;
 	overflow: hidden;
+	border-radius: 40px;
 	transition: 0.5s ease-in-out;
 	-webkit-box-shadow: -4px 17px 144px -41px rgba(0,0,0,0.39);
 	-moz-box-shadow: -4px 17px 144px -41px rgba(0,0,0,0.39);
@@ -9973,9 +9974,9 @@ footer .f-item.link li a:hover {
 
 #gooey {
 	position: absolute;
-	width: 25vw;
-	height: 25vw;
-	top: 750%;
+	width: 50vw;
+	height: 50vw;
+	top: 350em;
 	left: 25%;
 	border-radius: 50%;
 	filter: blur(50px);
@@ -9984,7 +9985,7 @@ footer .f-item.link li a:hover {
 	animation-direction: alternate;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
-	background: linear-gradient(#920b0dc1, #810f0fd9);
+	background: linear-gradient(#50505088, #15151583);
 }
 
 @keyframes gooey {
@@ -9995,6 +9996,35 @@ footer .f-item.link li a:hover {
 
 	to {
 		filter: blur(500px);
+		transform: translate(-10%, 10%) skew(-12deg);
+	}
+}
+
+
+#gooey2 {
+	position: absolute;
+	width: 50vw;
+	height: 50vw;
+	top: 600em;
+	left: 25%;
+	border-radius: 50%;
+	filter: blur(10px);
+	animation-name: gooey;
+	animation-duration: 6s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	background: linear-gradient(#636363, #1d1d1d58);
+}
+
+@keyframes gooey2 {
+	from {
+		filter: blur(10px);
+		transform: translate(10%, -10%) skew(0);
+	}
+
+	to {
+		filter: blur(10px);
 		transform: translate(-10%, 10%) skew(-12deg);
 	}
 }
@@ -10022,7 +10052,7 @@ footer .f-item.link li a:hover {
     z-index: 9999;
     position: fixed;
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
-    opacity: 0.25;
+    opacity: 0.5;
     pointer-events: none;
     -webkit-animation: noise 1s steps(2) infinite;
     animation: noise 1s steps(2) infinite;
@@ -10212,7 +10242,7 @@ padding: 2%;  }
 	width: 100%;
 	height: 100%;
 	background-color: #C7192B;
-	background: linear-gradient(to right, #F1F1F1, #F1F1F1) no-repeat;
+	background: linear-gradient(to right, #E3E3E3, #E3E3E3) no-repeat;
 	clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
 	transform-origin: center;
 	transition: all cubic-bezier(.1,.5,.5,1) 0.4s;
@@ -10328,3 +10358,127 @@ padding: 2%;  }
   .BtnviewMoreButton:active {
 	transform: translate(2px ,2px);
   }
+
+  .lines {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	margin: auto;
+	width: 90vw;
+	z-index: 1; /* Asegura que las líneas se posicionen sobre el video */
+  }
+  
+  .line {
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	top: 0;
+	left: 50%;
+	background: rgba(255, 255, 255, 0.1);
+	overflow: hidden;
+  }
+  
+  .line::after {
+	content: '';
+	display: block;
+	position: absolute;
+	height: 15vh;
+	width: 100%;
+	top: -50%;
+	left: 0;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+	animation: drop 7s 0s infinite;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  }
+  
+  .line:nth-child(1) {
+	margin-left: -25%;
+  }
+  
+  .line:nth-child(1)::after {
+	animation-delay: 2s;
+  }
+  
+  .line:nth-child(3) {
+	margin-left: 25%;
+  }
+  
+  .line:nth-child(3)::after {
+	animation-delay: 2.5s;
+  }
+  
+  @keyframes drop {
+	0% {
+	  top: -50%;
+	}
+	100% {
+	  top: 110%;
+	}
+  }
+  
+  #mainServicesSectionHeader{
+	-webkit-box-shadow: 0px -35px 142px -5px rgba(0, 0, 0, 0.029);
+	-moz-box-shadow: 0px -35px 142px -5px rgba(0, 0, 0, 0.051);
+	box-shadow: 0px -35px 142px -5px rgba(0, 0, 0, 0.043);
+  }
+
+
+
+  /*  Confetti Text */
+  .textcontainer {
+
+	text-align: start;
+ }
+ 
+ .particletext {
+	text-align: start;
+	font-size: 40px;
+	font-weight: 800;
+	color: #323232;
+	position: relative;
+ }
+ 
+ .particletext.confetti > .particle {
+	opacity: 0;
+	position: absolute;
+	animation: confetti 3s ease-in infinite;
+ }
+ 
+ .particletext.confetti > .particle.c1 {
+	background-color: rgba(205, 57, 57, 0.5);
+ }
+ 
+ .particletext.confetti > .particle.c2 {
+	background-color: rgba(254, 247, 255, 0.816);
+ }
+ 
+ @keyframes confetti {
+	0% {
+	   opacity: 0;
+	   transform: translateY(0%) rotate(0deg);
+	}
+	10% {
+	   opacity: 1;
+	}
+	35% {
+	   transform: translateY(-800%) rotate(270deg);
+	}
+	80% {
+	   opacity: 1;
+	}
+	100% {
+	   opacity: 0;
+	   transform: translateY(2000%) rotate(1440deg);
+	}
+ }
+ 
+ .hoverEffect {
+    transition: transform 0.2s ease-in-out;
+}
+
+.hoverEffect:hover {
+    transform: scale(1.05);
+}
