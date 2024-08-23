@@ -6170,3 +6170,50 @@ padding: 2%;  }
 	z-index: -1; 
 	border-radius: 0 0 10px 10px;
 }
+
+/* Media Queries for Projects */
+
+/* Mobile first approach: por defecto se muestra el mobileProjectsOverview y se oculta el portfolio */
+#mobileProjectsOverview {
+    display: block;
+}
+
+#portfolio {
+    display: none;
+}
+
+/* Media query para viewports mayores a 768px */
+@media (min-width: 768px) {
+    #mobileProjectsOverview {
+        display: none;
+    }
+
+    #portfolio {
+        display: block;
+    }
+}
+
+ /* Gallery for AboutSection Mobile Only */
+ #mobileGallerySection,
+ #portfolio {
+	 display: none;
+ }
+ 
+ /* Mostrar la galería móvil solo en viewports menores a 768px */
+ @media (max-width: 767px) {
+	 #mobileGallerySection {
+		 display: block;
+	 }
+ }
+ 
+ /* Mostrar la galería de escritorio solo en viewports mayores o iguales a 768px */
+ @media (min-width: 768px) {
+	 #portfolio {
+		 display: block;
+	 }
+ }
+ #bannerAbout {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}

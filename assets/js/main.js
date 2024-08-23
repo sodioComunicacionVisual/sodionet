@@ -669,7 +669,7 @@ textElements.forEach(text => {
     ease: 'power2.inOut',
     scrollTrigger: {
       trigger: text,
-      start: 'center 80%',
+      start: 'center 90%',
       end: 'center 30%', 
       scrub: 1.5,       
     },
